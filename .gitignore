@@ -1,0 +1,62 @@
+#ignore generic files ...
+Thumbs.db
+
+# Ignore file for Visual Studio 2008
+# use glob syntax
+syntax: glob
+
+# Ignore Visual Studio 2008 files
+*.sln # no solutions ...
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+*.lnk
+*.ide
+*.lock
+*.ide-shm
+*.ide-wal
+*.dtbcache
+[Bb]in
+[Dd]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*[Pp]ublish/
+[pP]ublish/
+*.orig
+*.vspx
+*.psess
+[dD]ocumentation/
+Source/Scripts/InstallUtil.InstallLog
+*.psess
+*.jmconfig
+[pP]atchs/
+.vs/config/applicationhost.config
+config/applicationhost.config
+[Pp]ackages/
+.vs
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
+.vs/FLOW2BOClient/v16/TestStore/0/000.testlog
+.vs/FLOW2BOClient/v16/TestStore/0/testlog.manifest
+*.vs/
