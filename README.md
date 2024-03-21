@@ -7,4 +7,5 @@
 5. Install PowerShell
 6. Install Playwright browsers (verify which .net version is installed, ex: net8.0): `pwsh bin/Debug/net8.0/playwright.ps1 install`
 7. Create a `project.runSettings` file on the root folder
-8. In order to execute tests using the RunSettings: `dotnet test --settings:project.runsettings`
+8. Install codegen from Playwright: `npx playwright codegen`
+9. In order to execute tests using the RunSettings: `dotnet test --settings:project.runsettings`
