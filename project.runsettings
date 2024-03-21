@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
-  <TestRunParameters>
+  <!-- <TestRunParameters>
     <Parameter name="BaseUrl" value="https://qa-automation-test-site.web.app/login" />
-  </TestRunParameters>
+  </TestRunParameters> -->
   <NUnit>
     <NumberOfTestWorkers>24</NumberOfTestWorkers>
   </NUnit>
