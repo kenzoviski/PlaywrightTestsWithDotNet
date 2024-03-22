@@ -11,19 +11,29 @@ namespace PlaywrightTests
         [Test]
         public async Task LoginTest()
         {
+            #region Gherkin
             /*
             Given the URL
             When page is loaded
             Then fill username, password and click btnLogin
             */
+            #endregion
 
-            //Initialization
-            BasePage basePage = new BasePage(Page);
+            #region Initialization
+            BasePage basePageInstance = new BasePage(Page);
             LoginPage loginPageInstance = new LoginPage(Page);
-            await Page.GotoAsync(basePage.GetFullUrl("/login"));
 
-            //Test steps
+
+            await Page.GotoAsync(basePageInstance.GetFullUrl("/login"));
+            #endregion
+
+
+            #region Test steps
+            await loginPageInstance.assertElementsLoginPage();
             await loginPageInstance.loginAction("test@test.com", "test");
+            await loginPageInstance.assertHomePageHeader();
+
+            #endregion
 
         }
     }

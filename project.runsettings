@@ -4,7 +4,7 @@
     <Parameter name="BaseUrl" value="https://qa-automation-test-site.web.app/login" />
   </TestRunParameters> -->
   <NUnit>
-    <NumberOfTestWorkers>24</NumberOfTestWorkers>
+    <NumberOfTestWorkers>10</NumberOfTestWorkers>
   </NUnit>
   <RunConfiguration>
     <EnvironmentVariables>
