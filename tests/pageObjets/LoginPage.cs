@@ -47,7 +47,14 @@ namespace loginPage
 
         public async Task assertHomePageHeader()
         {
-            await Assert.Expect(_pageHeader).ToHaveTextAsync("QA Automation Web");
+            //Regex expression guarantees that the page header must be exactly "QA Automation Web"
+            await Assert.Expect(_pageHeader).ToHaveTextAsync(new Regex("^QA Automation Web$"));
+        }
+
+        public async Task assertPageTitle()
+        {
+            //Regex expression guarantees that the page title must be exactly "DockerJenkinsAngular"
+            await Assert.Expect(Page).ToHaveTitleAsync(new Regex("^DockerJenkinsAngular$"));
         }
 
         #endregion
