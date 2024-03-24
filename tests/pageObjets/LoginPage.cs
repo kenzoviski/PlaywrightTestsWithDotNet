@@ -18,7 +18,6 @@ namespace loginPage
 
         public LoginPage(IPage page) : base(page)
         {
-
             _login = Page.Locator("mat-card-title");
             _userNameInput = Page.GetByLabel("Username *");
             _userPasswordInput = Page.GetByLabel("Password *");
@@ -45,17 +44,13 @@ namespace loginPage
             await Assert.Expect(_loginBtn).ToBeVisibleAsync();
         }
 
-        public async Task assertHomePageHeader()
-        {
+        public async Task assertHomePageHeader() =>
             //Regex expression guarantees that the page header must be exactly "QA Automation Web"
             await Assert.Expect(_pageHeader).ToHaveTextAsync(new Regex("^QA Automation Web$"));
-        }
 
-        public async Task assertPageTitle()
-        {
+        public async Task assertPageTitle() =>
             //Regex expression guarantees that the page title must be exactly "DockerJenkinsAngular"
             await Assert.Expect(Page).ToHaveTitleAsync(new Regex("^DockerJenkinsAngular$"));
-        }
 
         #endregion
     }

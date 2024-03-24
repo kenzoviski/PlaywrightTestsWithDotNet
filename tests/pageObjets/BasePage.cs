@@ -42,13 +42,6 @@ public class BasePage
 
     public string GetFullUrl(string relativeUrl = "")
     {
-        if (string.IsNullOrEmpty(relativeUrl))
-        {
-            return BaseUrl;
-        }
-        else
-        {
-            return $"{BaseUrl}{relativeUrl}";
-        }
+        return string.IsNullOrEmpty(relativeUrl) ? BaseUrl : $"{BaseUrl}{relativeUrl}";
     }
 }
