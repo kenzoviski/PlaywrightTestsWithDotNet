@@ -1,6 +1,8 @@
 using Microsoft.Playwright.NUnit;
 using loginPage;
 
+using basePage;
+
 namespace PlaywrightTests
 {
 
