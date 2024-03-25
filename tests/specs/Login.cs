@@ -8,7 +8,7 @@ namespace PlaywrightTests
 
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
-    public class Tests : PageTest
+    public class LoginTests : PageTest
     {
         #region Initialization
         /*Before each test, basePageInstance and loginPageInstance are instantiated.
@@ -26,8 +26,8 @@ namespace PlaywrightTests
         }
         #endregion
 
-        [Test]
-        public async Task LoginPageElements()
+        [Test, Order(1)]
+        public async Task PageElements()
         {
             #region Gherkin
             /*
@@ -42,8 +42,8 @@ namespace PlaywrightTests
             #endregion
         }
 
-        [Test]
-        public async Task LoginTest()
+        [Test, Order(2)]
+        public async Task Login()
         {
             #region Gherkin
             /*
