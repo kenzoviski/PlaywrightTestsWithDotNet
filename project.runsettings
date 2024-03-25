@@ -4,7 +4,7 @@
     <Parameter name="BaseUrl" value="https://qa-automation-test-site.web.app/login" />
   </TestRunParameters> -->
   <NUnit>
-    <NumberOfTestWorkers>10</NumberOfTestWorkers>
+    <NumberOfTestWorkers>24</NumberOfTestWorkers>
   </NUnit>
   <RunConfiguration>
     <EnvironmentVariables>
@@ -18,7 +18,7 @@
     <LaunchOptions>
       <Headless>false</Headless>
       <SlowMo>500</SlowMo>
-      <Channel>msedge</Channel>
+      <Channel>chrome</Channel>
     </LaunchOptions>
   </Playwright>
 </RunSettings>
