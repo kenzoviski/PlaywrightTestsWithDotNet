@@ -8,7 +8,7 @@ namespace PlaywrightTests
 
     [Parallelizable(ParallelScope.Self)]
     [TestFixture]
-    public class LoginTests : PageTest
+    public class CheckBoxes : PageTest
     {
         #region Initialization
         /*Before each test, basePageInstance and loginPageInstance are instantiated.
@@ -21,48 +21,34 @@ namespace PlaywrightTests
         [SetUp]
         public async Task SetUp()
         {
+            string username = "test@test.com";
+            string password = "test";
+
             basePageInstance = new BasePage(Page);
             loginPageInstance = new LoginPage(Page);
             commonElementsInstance = new CommonElements(Page);
 
             await Page.GotoAsync(basePageInstance.GetFullUrl("/login"));
+            await loginPageInstance.loginAction(username, password);
+
+            // Navigate to "Check-boxes" menu item
+            await commonElementsInstance.navigateToMenu(CommonElements.MenuLocator.CheckBoxes);
         }
         #endregion
 
         [Test, Order(1)]
-        public async Task PageElements()
+        public async Task CheckBoxesElements()
         {
             #region Gherkin
             /*
-            Given the URL
+            Given the URL: https://qa-automation-test-site.web.app/home
             When page is loaded
             Then assert all the elements are loaded/visible on the page
             */
             #endregion
 
             #region Test steps
-            await loginPageInstance.assertElementsLoginPage();
-            #endregion
-        }
-
-        [Test, Order(2)]
-        public async Task Login()
-        {
-            #region Gherkin
-            /*
-            Given the URL
-            When page is loaded
-            Then fill username, password and click btnLogin
-            */
-            #endregion
-
-            string username = "test@test.com";
-            string password = "test";
-
-            #region Test steps
-            await loginPageInstance.loginAction(username, password);
-            await commonElementsInstance.assertHomePageHeader();
-            await commonElementsInstance.assertPageTitle();
+            //await loginPageInstance.assertElementsCheckBoxesPage();
             #endregion
         }
     }
